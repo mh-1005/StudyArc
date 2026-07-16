@@ -1,6 +1,10 @@
 import customtkinter as ctk
 
 
+from studyarc.gui.components.sidebar import Sidebar
+from studyarc.gui.components.content import Content
+
+
 class MainWindow(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -8,9 +12,8 @@ class MainWindow(ctk.CTk):
         self.title("StudyArc")
         self.geometry("1000x700")
 
-        label = ctk.CTkLabel(
-            self,
-            text="Welcome to StudyArc 🚀",
-            font=("Arial", 24),
-        )
-        label.pack(expand=True)
+        sidebar = Sidebar(self)
+        sidebar.pack(side="left", fill="y")
+
+        content = Content(self)
+        content.pack(side="right", expand=True, fill="both")
