@@ -1,5 +1,8 @@
+from studyarc.gui.app import run
+
+
 def main():
-    print("Welcome to StudyArc 🚀")
+    run()
 
 
 if __name__ == "__main__":
