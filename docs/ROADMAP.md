@@ -18,17 +18,27 @@
 
 ---
 
-## v0.3.0 — Application Layout 
+## v0.3.0 — Application Layout ✅
 
-* [ ] Create sidebar layout
-* [ ] Create top navigation bar
-* [ ] Create main content area
-* [ ] Build reusable UI components
-* [ ] Improve application styling
+* [x] Create sidebar layout
+* [x] Create top navigation bar
+* [x] Create main content area
+* [x] Build reusable UI components
+* [x] Improve application styling
 
 ---
 
-## v0.4.0 — Notes System
+## v0.4.0 — Usability & Interface Design
+
+* [ ] Refine the application interface
+* [ ] Improve navigation styling
+* [ ] Refine typography and spacing
+* [ ] Create a consistent color palette
+* [ ] Enhance the dashboard layout
+
+---
+
+## v0.5.0 — Notes System
 
 * [ ] Create notes interface
 * [ ] Add create, edit, and delete notes
@@ -36,7 +46,7 @@
 
 ---
 
-## v0.5.0 — Database
+## v0.6.0 — Database
 
 * [ ] Integrate SQLite
 * [ ] Save notes permanently
@@ -44,7 +54,7 @@
 
 ---
 
-## v0.6.0 — AI Features
+## v0.7.0 — AI Features
 
 * [ ] Generate summaries
 * [ ] Generate flashcards

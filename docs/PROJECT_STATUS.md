@@ -6,19 +6,19 @@ StudyArc
 
 ## Current Version
 
-v0.2.0
+v0.3.0
 
 ## Current Sprint
 
-Sprint 2 — Application Layout
+Sprint 3 — UI Design
 
 ## Last Completed Milestone
 
-✅ First StudyArc application window
+✅ Initial application layout
 
 ## Next Milestone
 
-🎯 Build the application layout
+🎯 Improve usability and interface design
 
 ## Completed
 
@@ -32,11 +32,13 @@ Sprint 2 — Application Layout
 * [x] Project documentation completed
 * [x] CustomTkinter installed and configured
 * [x] Created the first StudyArc application window
-
+* [x] Application layout
+* [x] Sidebar navigation
+* [x] Reusable GUI components
 ## In Progress
 
-* [ ] Application layout
-* [ ] Sidebar navigation
+* [ ] Modern UI redesign
+* [ ] Improved navigation styling
 
 ## Upcoming
 
