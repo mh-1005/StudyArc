@@ -1,19 +1,31 @@
 import customtkinter as ctk
 
+from studyarc.config import colors
+from studyarc.config import fonts
+from studyarc.config import constants
 
 class Sidebar(ctk.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
 
-        self.configure(width=220)
+        self.configure(
+            width=constants.SIDEBAR_WIDTH,
+            fg_color=colors.SIDEBAR
+        )
 
         title = ctk.CTkLabel(
             self,
             text="StudyArc",
-            font=("Arial", 24, "bold")
+            font=fonts.TITLE_FONT,
+            text_color=colors.TEXT_PRIMARY 
         )
 
-        title.pack(pady=(30, 20))
+        title.pack(
+            pady=(
+                constants.PADDING + 10,
+                constants.SECTION_SPACING
+            )
+            )
 
         buttons = [
             "🏠 Home",
@@ -21,15 +33,22 @@ class Sidebar(ctk.CTkFrame):
             "🃏 Flashcards",
             "❓ Quiz",
             "⚙️ Settings"
-        ]
+            ]
 
         for text in buttons:
             button = ctk.CTkButton(
                 self,
-                text=text
+                text=text,
+                font=fonts.BUTTON_FONT,
+                height=constants.BUTTON_HEIGHT,
+                corner_radius=constants.CORNER_RADIUS,
+                fg_color="transparent",
+                hover_color=colors.HOVER,
+                text_color=colors.TEXT_PRIMARY,
+                anchor="w"
             )
             button.pack(
-                padx=20,
-                pady=8,
+                padx=constants.PADDING,
+                pady=constants.WIDGET_SPACING,
                 fill="x"
             )

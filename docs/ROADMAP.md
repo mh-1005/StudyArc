@@ -18,23 +18,29 @@
 
 ---
 
-## v0.3.0 — Application Layout ✅
+## v0.3.0 — Application Layout & UI Foundation ✅
 
 * [x] Create sidebar layout
-* [x] Create top navigation bar
 * [x] Create main content area
 * [x] Build reusable UI components
 * [x] Improve application styling
+* [x] Create centralized UI configuration
+* [x] Define application color palette
+* [x] Define typography system
+* [x] Define spacing and layout constants
+* [x] Refactor components to use centralized styling
 
 ---
 
-## v0.4.0 — Usability & Interface Design
+## v0.4.0 — Usability & Interface Improvements
 
-* [ ] Refine the application interface
-* [ ] Improve navigation styling
-* [ ] Refine typography and spacing
-* [ ] Create a consistent color palette
-* [ ] Enhance the dashboard layout
+* [ ] Create top navigation bar
+* [ ] Add active navigation state
+* [ ] Replace emojis with icons
+* [ ] Improve sidebar interactions
+* [ ] Add hover effects
+* [ ] Improve dashboard layout
+* [ ] Add search and profile actions
 
 ---
 

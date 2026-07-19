@@ -10,6 +10,14 @@ All notable changes to StudyArc will be documented in this file.
 - Added sidebar component
 - Added content area component
 - Built the initial application layout
+- Added centralized UI configuration system
+- Added application color palette
+- Added typography configuration
+- Added spacing and layout constants
+### Changed
+- Refactored GUI components to use centralized styling
+- Replaced hardcoded fonts, colors, and dimensions
+- Improved application consistency and maintainability
 ---
 
 ## [0.2.0] - 2026-07-16
