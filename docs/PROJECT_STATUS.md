@@ -6,19 +6,19 @@ StudyArc
 
 ## Current Version
 
-v0.3.0
+v0.4.0
 
 ## Current Sprint
 
-Sprint 3 — UI Design
+Sprint 5 — Notes System
 
 ## Last Completed Milestone
 
-✅ UI Design System Foundation
+✅ Usability & Interface Improvements
 
 ## Next Milestone
 
-🎯 Improve usability and interface design
+🎯 Build Notes System
 
 ## Completed
 
@@ -40,18 +40,32 @@ Sprint 3 — UI Design
 * [x] Added typography configuration
 * [x] Added spacing and layout constants
 * [x] Refactored components to use centralized styling
+* [x] Created top navigation bar
+* [x] Added active sidebar navigation state
+* [x] Replaced sidebar emojis with icons
+* [x] Improved sidebar interactions
+* [x] Built dashboard layout
+* [x] Added reusable action card component
+* [x] Added reusable content card component
+* [x] Added Recent Activity section
+* [x] Added Statistics section
+* [x] Added search and profile UI
+
 ## In Progress
 
-* [ ] UI improvements and usability enhancements
+* [ ] Notes system development
 
 ## Upcoming
 
-* [ ] SQLite database
-* [ ] Notes system
-* [ ] Search functionality
-* [ ] Flashcards
-* [ ] Quiz generator
-* [ ] AI integration
-* [ ] User settings
+* [ ] Create notes interface
+* [ ] Add create, edit, and delete notes
+* [ ] Organize notes by subject
+* [ ] Integrate SQLite database
+* [ ] Save notes permanently
+* [ ] Implement search functionality
+* [ ] Generate summaries
+* [ ] Generate flashcards
+* [ ] Generate quizzes
+* [ ] Add settings and customization
 * [ ] Data export/import
 * [ ] Packaging and distribution

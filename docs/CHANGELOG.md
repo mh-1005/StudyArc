@@ -3,6 +3,24 @@
 All notable changes to StudyArc will be documented in this file.
 
 ---
+## [0.4.0] - 2026-08-02
+
+### Added
+- Created top navigation bar component
+- Added active navigation state for sidebar
+- Added dashboard layout for Home page
+- Added reusable action card component
+- Added reusable content card component
+- Added Recent Activity section
+- Added Statistics section
+- Added search and profile UI elements
+
+### Changed
+- Improved sidebar navigation experience
+- Replaced sidebar emojis with icons
+- Improved application interface structure
+- Improved component organization for better scalability
+---
 ## [0.3.0] - 2026-07-17
 
 ### Added

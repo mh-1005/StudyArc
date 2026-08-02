@@ -32,15 +32,15 @@
 
 ---
 
-## v0.4.0 — Usability & Interface Improvements
+## v0.4.0 — Usability & Interface Improvements ✅
 
-* [ ] Create top navigation bar
-* [ ] Add active navigation state
-* [ ] Replace emojis with icons
-* [ ] Improve sidebar interactions
+* [x] Create top navigation bar
+* [x] Add active navigation state
+* [x] Replace sidebar emojis with icons
+* [x] Improve sidebar interactions
 * [ ] Add hover effects
-* [ ] Improve dashboard layout
-* [ ] Add search and profile actions
+* [x] Improve dashboard layout
+* [x] Add search and profile actions UI
 
 ---
 
@@ -68,11 +68,18 @@
 
 ---
 
+## v0.8.0 — User Experience & Customization
+
+* [ ] Create settings page
+* [ ] Improve dark mode experience
+* [ ] Add user preferences
+* [ ] Add export and import functionality
+* [ ] Improve UI responsiveness
+
+---
+
 ## Future
 
-* [ ] Dark mode improvements
-* [ ] Settings
-* [ ] Export & Import
 * [ ] Cloud sync
 * [ ] User accounts
 * [ ] Cross-device synchronization
