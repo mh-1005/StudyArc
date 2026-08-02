@@ -4,38 +4,39 @@ from studyarc.config import colors
 from studyarc.config import fonts
 from studyarc.config import constants
 
+from studyarc.gui.pages.home_page import HomePage
+from studyarc.gui.pages.notes_page import NotesPage
+from studyarc.gui.pages.flashcards_page import FlashcardsPage
+from studyarc.gui.pages.quiz_page import QuizPage
+from studyarc.gui.pages.settings_page import SettingsPage
+
 class Content(ctk.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
+        self.current_page = None
+        self.pages = {
+            "home": HomePage,
+            "notes": NotesPage,
+            "flashcards": FlashcardsPage,
+            "quiz": QuizPage,
+            "settings": SettingsPage
+        }
+        
         self.configure(fg_color=colors.BACKGROUND)
 
-        title = ctk.CTkLabel(
-            self,
-            text="Welcome to StudyArc",
-            font=fonts.TITLE_FONT,
-            text_color=colors.TEXT_PRIMARY
-        )
+        self.show_page("home")
+ 
 
-        subtitle = ctk.CTkLabel(
-            self,
-            text="Your AI-powered study companion",
-            font=fonts.SUBHEADING_FONT,
-            text_color=colors.TEXT_SECONDARY
-        )
-        description = ctk.CTkLabel(
-            self,
-            text="Start by creating your first note or explore the tools from the sidebar.",
-            font=fonts.BODY_FONT,
-            text_color=colors.TEXT_SECONDARY,
-            wraplength=500,
-            justify="center"
-        )
-        
+    def show_page(self, page):
+        # Remove the currently displayed page
+        if self.current_page is not None:
+            self.current_page.destroy()
 
-        title.pack(pady=(
-                constants.PADDING * 3,
-                constants.WIDGET_SPACING
-        )
-        )
-        subtitle.pack()
-        description.pack(pady=(constants.SECTION_SPACING, 0))
+        # Find the requested page class
+        page_class = self.pages[page]
+
+        # Create the new page
+        self.current_page = page_class(self)
+
+        # Display it
+        self.current_page.pack(expand=True, fill="both")
