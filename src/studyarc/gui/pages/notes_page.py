@@ -3,24 +3,27 @@ import customtkinter as ctk
 from studyarc.config import colors
 from studyarc.config import fonts
 
+from studyarc.gui.dialogs.note_editor import NoteEditor
+
 
 class NotesPage(ctk.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
 
-        title = ctk.CTkLabel(
-            self,
-            text="Notes",
-            font=fonts.TITLE_FONT,
-            text_color=colors.TEXT_PRIMARY
+        new_note_button = ctk.CTkButton(
+            self, text="+ New Note", command=self.open_note_editor
         )
 
-        subtitle = ctk.CTkLabel(
+        new_note_button.pack(pady=(40, 20))
+
+        empty_message = ctk.CTkLabel(
             self,
-            text="Create, organize, and manage your study notes.",
+            text="No notes yet.\nClick '+ New Note' to create one.",
             font=fonts.BODY_FONT,
-            text_color=colors.TEXT_SECONDARY
+            text_color=colors.TEXT_SECONDARY,
         )
 
-        title.pack(pady=(60, 10))
-        subtitle.pack()
+        empty_message.pack(expand=True)
+
+    def open_note_editor(self):
+        NoteEditor(self)
