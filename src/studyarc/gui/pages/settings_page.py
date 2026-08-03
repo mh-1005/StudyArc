@@ -5,21 +5,18 @@ from studyarc.config import fonts
 
 
 class SettingsPage(ctk.CTkFrame):
-    def __init__(self, master):
+    def __init__(self, master, note_service=None):
         super().__init__(master)
 
         title = ctk.CTkLabel(
-            self,
-            text="Settings",
-            font=fonts.TITLE_FONT,
-            text_color=colors.TEXT_PRIMARY
+            self, text="Settings", font=fonts.TITLE_FONT, text_color=colors.TEXT_PRIMARY
         )
 
         subtitle = ctk.CTkLabel(
             self,
             text="Customize your StudyArc experience.",
             font=fonts.BODY_FONT,
-            text_color=colors.TEXT_SECONDARY
+            text_color=colors.TEXT_SECONDARY,
         )
 
         title.pack(pady=(60, 10))

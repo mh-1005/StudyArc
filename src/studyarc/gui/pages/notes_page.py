@@ -5,6 +5,8 @@ from studyarc.config import fonts
 
 from studyarc.gui.dialogs.note_editor import NoteEditor
 from studyarc.gui.components.note_card import NoteCard
+from studyarc.models import note
+from studyarc.models.note import Note
 
 
 class NotesPage(ctk.CTkFrame):
@@ -48,6 +50,9 @@ class NotesPage(ctk.CTkFrame):
             return
 
         for note in notes:
-            note_card = NoteCard(self.notes_container, note)
+            note_card = NoteCard(self.notes_container, note, command=self.open_note)
 
             note_card.pack(pady=10)
+
+    def open_note(self, note):
+        NoteEditor(self, self.note_service, note)

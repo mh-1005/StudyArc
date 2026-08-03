@@ -8,10 +8,11 @@ from studyarc.gui.components import content
 
 class NoteCard(ctk.CTkFrame):
 
-    def __init__(self, master, note):
+    def __init__(self, master, note, command=None):
         super().__init__(master)
 
         self.note = note
+        self.command = command
 
         self.configure(
             fg_color=colors.CARD,
@@ -57,9 +58,14 @@ class NoteCard(ctk.CTkFrame):
 
         self.bind("<Enter>", self.on_enter)
         self.bind("<Leave>", self.on_leave)
+        self.bind("<Button-1>", self.on_click)
 
     def on_enter(self, event):
         self.configure(fg_color=colors.CARD_HOVER)
 
     def on_leave(self, event):
         self.configure(fg_color=colors.CARD)
+
+    def on_click(self, event):
+        if self.command:
+            self.command(self.note)

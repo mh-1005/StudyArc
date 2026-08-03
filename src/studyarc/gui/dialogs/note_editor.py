@@ -1,15 +1,19 @@
 import customtkinter as ctk
-from studyarc.models import note
 from studyarc.models.note import Note
 
 
 class NoteEditor(ctk.CTkToplevel):
-    def __init__(self, master, note_service):
+    def __init__(self, master, note_service, note=None):
         super().__init__(master)
 
         self.note_service = note_service
+        self.note = note
 
-        self.title("New Note")
+        if self.note:
+            self.title("Edit Note")
+        else:
+            self.title("New Note")
+
         self.geometry("700x600")
         self.resizable(False, False)
 
@@ -31,6 +35,11 @@ class NoteEditor(ctk.CTkToplevel):
         self.content_text = ctk.CTkTextbox(self, height=250)
         self.content_text.pack(fill="both", expand=True, padx=20)
 
+        if self.note:
+            self.title_entry.insert(0, self.note.title)
+            self.subject_entry.insert(0, self.note.subject)
+            self.content_text.insert("1.0", self.note.content)
+
         button_frame = ctk.CTkFrame(self, fg_color="transparent")
 
         button_frame.pack(fill="x", padx=20, pady=20)
@@ -38,6 +47,16 @@ class NoteEditor(ctk.CTkToplevel):
         cancel_button = ctk.CTkButton(button_frame, text="Cancel", command=self.destroy)
 
         cancel_button.pack(side="right", padx=(10, 0))
+
+        delete_button = ctk.CTkButton(
+            button_frame,
+            text="Delete",
+            fg_color="red",
+            hover_color="#b22222",
+            command=self.delete_note,
+        )
+        if self.note:
+            delete_button.pack(side="left")
 
         save_button = ctk.CTkButton(button_frame, text="Save", command=self.save_note)
 
@@ -50,8 +69,20 @@ class NoteEditor(ctk.CTkToplevel):
             content=self.content_text.get("1.0", "end-1c"),
         )
 
-        self.note_service.add_note(note)
+        if self.note:
+            self.note_service.update_note(self.note, note)
+        else:
+            self.note_service.add_note(note)
 
-        self.master.refresh_notes()
+        if hasattr(self.master, "refresh_notes"):
+            self.master.refresh_notes()
+
+        self.destroy()
+
+    def delete_note(self):
+        self.note_service.delete_note(self.note)
+
+        if hasattr(self.master, "refresh_notes"):
+            self.master.refresh_notes()
 
         self.destroy()
