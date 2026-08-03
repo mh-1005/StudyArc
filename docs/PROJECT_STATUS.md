@@ -6,7 +6,7 @@ StudyArc
 
 ## Current Version
 
-v0.4.0
+v0.5.0
 
 ## Current Sprint
 
@@ -14,11 +14,11 @@ Sprint 5 — Notes System
 
 ## Last Completed Milestone
 
-✅ Usability & Interface Improvements
+✅ Notes System Foundation
 
 ## Next Milestone
 
-🎯 Build Notes System
+🎯 Complete Notes Management (v0.5.1)
 
 ## Completed
 
@@ -50,6 +50,12 @@ Sprint 5 — Notes System
 * [x] Added Recent Activity section
 * [x] Added Statistics section
 * [x] Added search and profile UI
+* [x] Created note data model
+* [x] Created note service layer
+* [x] Built note editor dialog
+* [x] Added notes display system
+* [x] Created reusable note cards
+* [x] Added notes page UI improvements
 
 ## In Progress
 

@@ -2,7 +2,23 @@
 
 All notable changes to StudyArc will be documented in this file.
 
+
+## [0.5.0] - 2026-08-03
+
+### Added
+- Created notes interface
+- Added note model structure
+- Added note service layer
+- Added note editor dialog
+- Added reusable note card component
+- Added notes display functionality
+
+### Changed
+- Improved notes page layout
+- Added note card hover effects
+- Improved note preview display
 ---
+
 ## [0.4.0] - 2026-08-02
 
 ### Added
@@ -21,6 +37,7 @@ All notable changes to StudyArc will be documented in this file.
 - Improved application interface structure
 - Improved component organization for better scalability
 ---
+
 ## [0.3.0] - 2026-07-17
 
 ### Added

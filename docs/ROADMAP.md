@@ -44,10 +44,21 @@
 
 ---
 
-## v0.5.0 — Notes System
+## v0.5.0 — Notes System Foundation ✅
 
-* [ ] Create notes interface
-* [ ] Add create, edit, and delete notes
+* [x] Create notes interface
+* [x] Create note model
+* [x] Create note service
+* [x] Add create notes functionality
+* [x] Display notes using reusable note cards
+* [x] Improve notes page UI
+
+---
+
+## v0.5.1 — Notes Management
+
+* [ ] Edit notes
+* [ ] Delete notes
 * [ ] Organize notes by subject
 
 ---
