@@ -7,11 +7,14 @@ from studyarc.gui.components.action_card import Card
 from studyarc.gui.components.content_card import ContentCard
 
 from studyarc.gui.dialogs.note_editor import NoteEditor
+from studyarc.services.note_service import NoteService
 
 
 class HomePage(ctk.CTkFrame):
-    def __init__(self, master):
+    def __init__(self, master, note_service):
         super().__init__(master)
+
+        self.note_service = note_service
 
         title = ctk.CTkLabel(
             self,
@@ -119,4 +122,4 @@ class HomePage(ctk.CTkFrame):
         quiz_label.pack(anchor="w", pady=3)
 
     def open_note_editor(self):
-        NoteEditor(self)
+        NoteEditor(self, self.note_service)

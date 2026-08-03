@@ -10,22 +10,26 @@ from studyarc.gui.pages.flashcards_page import FlashcardsPage
 from studyarc.gui.pages.quiz_page import QuizPage
 from studyarc.gui.pages.settings_page import SettingsPage
 
+
 class Content(ctk.CTkFrame):
-    def __init__(self, master):
+    def __init__(self, master, note_service):
         super().__init__(master)
+
+        self.note_service = note_service
+
         self.current_page = None
+
         self.pages = {
             "home": HomePage,
             "notes": NotesPage,
             "flashcards": FlashcardsPage,
             "quiz": QuizPage,
-            "settings": SettingsPage
+            "settings": SettingsPage,
         }
-        
+
         self.configure(fg_color=colors.BACKGROUND)
 
         self.show_page("home")
- 
 
     def show_page(self, page):
         # Remove the currently displayed page
@@ -36,7 +40,7 @@ class Content(ctk.CTkFrame):
         page_class = self.pages[page]
 
         # Create the new page
-        self.current_page = page_class(self)
+        self.current_page = page_class(self,self.note_service)
 
         # Display it
         self.current_page.pack(expand=True, fill="both")
