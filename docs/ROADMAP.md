@@ -55,13 +55,20 @@
 
 ---
 
-## v0.5.1 — Notes Management
+## v0.5.1 — Notes Management ✅
 
-* [ ] Edit notes
-* [ ] Delete notes
-* [ ] Organize notes by subject
+- [x] Open notes
+- [x] Edit notes
+- [x] Delete notes
 
 ---
+
+## v0.5.2 — Architecture Cleanup
+
+- [ ] Automatic Home page statistics refresh
+- [ ] Callback/event system
+- [ ] Standardize page constructors
+- [ ] General code cleanup
 
 ## v0.6.0 — Database
 

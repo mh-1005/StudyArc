@@ -2,6 +2,24 @@
 
 All notable changes to StudyArc will be documented in this file.
 
+## [0.5.1] - 2026-08-04
+
+### Added
+- Open notes from the Notes page
+- Added note editing
+- Added note deletion
+- Made note cards clickable
+
+### Changed
+- Note editor now supports both creating and editing notes
+- Improved note preview formatting
+- Improved Notes page interface
+
+### Fixed
+- Fixed duplicate note creation when editing
+- Fixed dialog closing after saving notes
+- Fixed page initialization to support shared services
+---
 
 ## [0.5.0] - 2026-08-03
 

@@ -15,6 +15,10 @@ Future features for StudyArc.
 - Generate explanations
 - Create personalized study plans
 
+## Architecture
+
+- Refresh Home page statistics automatically
+- Introduce event/callback system
 
 ## Productivity
 - Study timer

@@ -6,19 +6,19 @@ StudyArc
 
 ## Current Version
 
-v0.5.0
+v0.5.1
 
 ## Current Sprint
 
-Sprint 5 — Notes System
+Sprint 6 — Notes Management
 
 ## Last Completed Milestone
 
-✅ Notes System Foundation
+✅ Notes Management
 
 ## Next Milestone
 
-🎯 Complete Notes Management (v0.5.1)
+🎯 Architecture Cleanup (v0.5.2)
 
 ## Completed
 
@@ -56,15 +56,19 @@ Sprint 5 — Notes System
 * [x] Added notes display system
 * [x] Created reusable note cards
 * [x] Added notes page UI improvements
+* [x] Open existing notes
+* [x] Edit notes
+* [x] Delete notes
 
 ## In Progress
 
-* [ ] Notes system development
+* [ ] Architecture cleanup
 
 ## Upcoming
 
-* [ ] Create notes interface
-* [ ] Add create, edit, and delete notes
+* [ ] Automatic Home page statistics refresh
+* [ ] Replace page refreshes with callback/event system
+* [ ] Refactor shared page/service architecture
 * [ ] Organize notes by subject
 * [ ] Integrate SQLite database
 * [ ] Save notes permanently
