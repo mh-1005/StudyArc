@@ -1,55 +1,93 @@
 # StudyArc
 
-StudyArc is an AI-powered desktop study assistant built with Python to help students organize knowledge, study more effectively, and learn smarter.
+<p align="center">
+  <img src="assets/screenshots/dashboard.png" width="900" alt="StudyArc Dashboard">
+</p>
 
-## Vision
+## Overview
 
-StudyArc aims to become an all-in-one study companion by combining note management, intelligent learning tools, and productivity features into a single desktop application.
+StudyArc is an AI-powered desktop study assistant built with Python to help students organize knowledge, improve learning workflows, and create personalized study experiences.
 
-## Current Features
+The goal is to combine modern software engineering practices with AI-powered learning tools to build a scalable study companion.
 
-- 🖥️ Desktop application interface
-- 🧭 Sidebar navigation
-- 🔝 Top navigation bar
-- 🏠 Dashboard layout
-- 📝 Quick action cards
-- 📊 Activity and statistics sections
-- 🎨 Centralized UI styling system
+---
 
+## Architecture
 
-## Planned Features
+StudyArc follows a modular architecture designed for scalability and maintainability.
 
-- 📝 Organize and manage study notes
-- 🔍 Fast search across notes
-- 🤖 AI-generated summaries
-- 🧠 AI-powered flashcards
-- ❓ AI quiz generation
-- 📚 Subject organization
-- ⏱️ Study timer and progress tracking
-- 💾 Local SQLite database
-- ☁️ Cloud sync *(future)*
+```text
+StudyArc
 
-## Tech Stack
+├── Presentation Layer
+│   └── Desktop UI (CustomTkinter)
 
-- Python 3.14
-- CustomTkinter
-- Pillow (UI assets)
-- SQLite *(upcoming)*
-- Git & GitHub
+├── Service Layer
+│   └── Application Logic
 
-## Project Status
+├── Data Layer
+│   └── Models & Database
 
-Current Version: v0.4.0
+└── AI Layer
+    ├── Document Processing
+    ├── Retrieval System
+    ├── Embeddings
+    └── LLM Integration
+```
 
-🚧 Currently under active development.
+The project focuses on separation of concerns, reusable components, and clean system design.
 
-Completed:
-- Application foundation
-- GUI system
-- Navigation structure
-- Dashboard interface
+---
 
-Next:
-- Notes management system
-- Database integration
-- AI learning features
+## Technology Stack
+
+| Area | Technology |
+| --- | --- |
+| Language | Python |
+| Desktop UI | CustomTkinter |
+| Image Processing | Pillow |
+| Database | SQLite |
+| Version Control | Git & GitHub |
+| AI | LLMs, RAG, Embeddings *(planned)* |
+
+---
+
+## AI Vision
+
+StudyArc aims to transform personal study materials into intelligent learning experiences.
+
+Planned AI capabilities:
+
+- AI-powered knowledge assistant
+- Document-based question answering
+- Automatic summaries
+- Flashcard generation
+- Quiz generation
+- Personalized learning support
+
+The AI system will be built around Retrieval Augmented Generation (RAG), semantic search, and large language models.
+
+---
+
+## Development
+
+StudyArc is actively under development.
+
+The project is built incrementally with a focus on:
+
+- Clean architecture
+- Maintainable code
+- Scalable design
+- Practical software engineering principles
+
+For detailed progress and milestones:
+
+- `docs/ROADMAP.md`
+- `docs/PROJECT_STATUS.md`
+- `docs/CHANGELOG.md`
+
+---
+
+## License
+
+This project is currently under development.
