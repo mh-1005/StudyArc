@@ -5,8 +5,10 @@ from studyarc.config import fonts
 
 
 class QuizPage(ctk.CTkFrame):
-    def __init__(self, master, note_service=None):
+    def __init__(self, master, note_service):
         super().__init__(master)
+
+        self.note_service = note_service
 
         title = ctk.CTkLabel(
             self, text="Quiz", font=fonts.TITLE_FONT, text_color=colors.TEXT_PRIMARY
