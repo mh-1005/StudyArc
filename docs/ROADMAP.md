@@ -57,18 +57,21 @@
 
 ## v0.5.1 — Notes Management ✅
 
-- [x] Open notes
-- [x] Edit notes
-- [x] Delete notes
+* [x] Open notes
+* [x] Edit notes
+* [x] Delete notes
 
 ---
 
-## v0.5.2 — Architecture Cleanup
+## v0.5.2 — Architecture Cleanup ✅
 
-- [ ] Automatic Home page statistics refresh
-- [ ] Callback/event system
-- [ ] Standardize page constructors
-- [ ] General code cleanup
+* [x] Automatic Home page statistics refresh
+* [x] Callback/event system
+* [x] Standardize page constructors
+* [x] Improve service and page communication
+* [x] Clean up unused imports and application code
+
+---
 
 ## v0.6.0 — Database
 

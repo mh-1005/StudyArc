@@ -1,6 +1,21 @@
 # Changelog
 
 All notable changes to StudyArc will be documented in this file.
+## [0.5.2] - 2026-08-13
+
+### Added
+- Added callback-based listener system for service updates
+- Added automatic Home page statistics refresh
+
+### Changed
+- Standardized page constructors to support shared services
+- Improved service and page communication
+- Improved listener lifecycle management
+
+### Fixed
+- Fixed Home page statistics showing stale values after navigation
+- Removed unused imports and cleaned up application code
+---
 
 ## [0.5.1] - 2026-08-04
 
