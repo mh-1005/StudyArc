@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from studyarc.models import note
 from studyarc.models.note import Note
 
 
@@ -74,15 +75,8 @@ class NoteEditor(ctk.CTkToplevel):
         else:
             self.note_service.add_note(note)
 
-        if hasattr(self.master, "refresh_notes"):
-            self.master.refresh_notes()
-
         self.destroy()
 
     def delete_note(self):
         self.note_service.delete_note(self.note)
-
-        if hasattr(self.master, "refresh_notes"):
-            self.master.refresh_notes()
-
         self.destroy()

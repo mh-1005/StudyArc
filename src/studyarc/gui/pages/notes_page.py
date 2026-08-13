@@ -14,6 +14,7 @@ class NotesPage(ctk.CTkFrame):
         super().__init__(master)
 
         self.note_service = note_service
+        self.note_service.add_listener(self.refresh_notes)
 
         new_note_button = ctk.CTkButton(
             self, text="+ New Note", command=self.open_note_editor
@@ -56,3 +57,7 @@ class NotesPage(ctk.CTkFrame):
 
     def open_note(self, note):
         NoteEditor(self, self.note_service, note)
+
+    def destroy(self):
+        self.note_service.remove_listener(self.refresh_notes)
+        super().destroy()

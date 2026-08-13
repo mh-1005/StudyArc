@@ -15,6 +15,7 @@ class HomePage(ctk.CTkFrame):
         super().__init__(master)
 
         self.note_service = note_service
+        self.note_service.add_listener(self.refresh_stats)
 
         title = ctk.CTkLabel(
             self,
@@ -94,32 +95,41 @@ class HomePage(ctk.CTkFrame):
 
         stats.pack_propagate(False)
 
-        notes_label = ctk.CTkLabel(
+        self.notes_label = ctk.CTkLabel(
             stats.body,
             text="Notes: 0",
             font=fonts.BODY_FONT,
             text_color=colors.TEXT_SECONDARY,
         )
 
-        notes_label.pack(anchor="w", pady=3)
+        self.notes_label.pack(anchor="w", pady=3)
 
-        flashcards_label = ctk.CTkLabel(
+        self.flashcards_label = ctk.CTkLabel(
             stats.body,
             text="Flashcards: 0",
             font=fonts.BODY_FONT,
             text_color=colors.TEXT_SECONDARY,
         )
 
-        flashcards_label.pack(anchor="w", pady=3)
+        self.flashcards_label.pack(anchor="w", pady=3)
 
-        quiz_label = ctk.CTkLabel(
+        self.quiz_label = ctk.CTkLabel(
             stats.body,
             text="Quizzes: 0",
             font=fonts.BODY_FONT,
             text_color=colors.TEXT_SECONDARY,
         )
 
-        quiz_label.pack(anchor="w", pady=3)
+        self.quiz_label.pack(anchor="w", pady=3)
 
     def open_note_editor(self):
         NoteEditor(self, self.note_service)
+
+    def refresh_stats(self):
+        notes_count = len(self.note_service.get_notes())
+
+        self.notes_label.configure(text=f"Notes: {notes_count}")
+
+    def destroy(self):
+        self.note_service.remove_listener(self.refresh_stats)
+        super().destroy()
