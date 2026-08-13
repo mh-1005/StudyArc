@@ -5,8 +5,6 @@ from studyarc.config import fonts
 
 from studyarc.gui.dialogs.note_editor import NoteEditor
 from studyarc.gui.components.note_card import NoteCard
-from studyarc.models import note
-from studyarc.models.note import Note
 
 
 class NotesPage(ctk.CTkFrame):

@@ -1,5 +1,4 @@
 import customtkinter as ctk
-from studyarc.models import note
 from studyarc.models.note import Note
 
 
