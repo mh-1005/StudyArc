@@ -6,3 +6,4 @@ class Note:
     title: str
     subject: str
     content: str
+    id: int | None = None
